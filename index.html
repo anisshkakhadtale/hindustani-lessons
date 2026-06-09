@@ -195,7 +195,7 @@
       align-items: center;
       justify-content: center;
     }
-    .raga-pattern { opacity: 0.18; width: 80%; }
+    .raga-pattern { opacity: 0.92; width: 88%; max-height: 90%; }
     .hero-badge {
       position: absolute;
       bottom: 2.5rem;
@@ -501,22 +501,189 @@
   </div>
   <div class="hero-visual" aria-hidden="true">
     <div class="hero-visual-inner">
-      <svg class="raga-pattern" viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="200" cy="420" rx="80" ry="140" stroke="#8B5E3C" stroke-width="1.5"/>
-        <ellipse cx="200" cy="420" rx="55" ry="100" stroke="#8B5E3C" stroke-width="1"/>
-        <ellipse cx="200" cy="420" rx="30" ry="60" stroke="#8B5E3C" stroke-width="0.8"/>
-        <line x1="200" y1="280" x2="200" y2="60" stroke="#8B5E3C" stroke-width="1.5"/>
-        <rect x="183" y="55" width="34" height="14" rx="2" stroke="#8B5E3C" stroke-width="1.2"/>
-        <line x1="160" y1="260" x2="240" y2="260" stroke="#8B5E3C" stroke-width="1"/>
-        <line x1="155" y1="275" x2="245" y2="275" stroke="#8B5E3C" stroke-width="0.8"/>
-        <path d="M 60 150 Q 100 130 140 150 Q 180 170 220 150 Q 260 130 300 150 Q 330 165 350 150" stroke="#8B5E3C" stroke-width="0.8" fill="none" opacity="0.6"/>
-        <path d="M 60 170 Q 100 150 140 170 Q 180 190 220 170 Q 260 150 300 170 Q 330 185 350 170" stroke="#8B5E3C" stroke-width="0.6" fill="none" opacity="0.4"/>
-        <path d="M 60 190 Q 100 170 140 190 Q 180 210 220 190 Q 260 170 300 190 Q 330 205 350 190" stroke="#8B5E3C" stroke-width="0.5" fill="none" opacity="0.3"/>
-        <circle cx="108" cy="370" r="3" fill="#C49A6C" opacity="0.5"/>
-        <circle cx="160" cy="335" r="3" fill="#C49A6C" opacity="0.5"/>
-        <circle cx="200" cy="320" r="3" fill="#C49A6C" opacity="0.5"/>
-        <circle cx="240" cy="335" r="3" fill="#C49A6C" opacity="0.5"/>
-        <circle cx="292" cy="370" r="3" fill="#C49A6C" opacity="0.5"/>
+      <svg class="raga-pattern" viewBox="0 0 680 820" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#4A2810"/>
+            <stop offset="50%" style="stop-color:#8B5E3C"/>
+            <stop offset="100%" style="stop-color:#4A2810"/>
+          </linearGradient>
+          <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#3D2210"/>
+            <stop offset="40%" style="stop-color:#8B5E3C"/>
+            <stop offset="100%" style="stop-color:#3D2210"/>
+          </linearGradient>
+          <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#C49A6C"/>
+            <stop offset="100%" style="stop-color:#8B5E3C"/>
+          </linearGradient>
+          <linearGradient id="gFace" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#5C3A1E"/>
+            <stop offset="30%" style="stop-color:#A87848"/>
+            <stop offset="55%" style="stop-color:#C49A6C"/>
+            <stop offset="80%" style="stop-color:#A87848"/>
+            <stop offset="100%" style="stop-color:#5C3A1E"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Background glow matching --warm -->
+        <ellipse cx="340" cy="480" rx="210" ry="330" fill="#EDE9E1" opacity="0.6"/>
+
+        <!-- ── DECORATIVE FLOURISHES ── -->
+        <path d="M 310 120 Q 430 75 445 205 Q 458 325 355 385 Q 255 445 278 565 Q 298 655 425 682" fill="none" stroke="#8B5E3C" stroke-width="22" opacity="0.06"/>
+        <path d="M 310 120 Q 430 75 445 205 Q 458 325 355 385 Q 255 445 278 565 Q 298 655 425 682" fill="none" stroke="#8B5E3C" stroke-width="9" opacity="0.10"/>
+        <!-- Curl flourishes -->
+        <path d="M 432 132 Q 482 90 502 142 Q 512 182 472 192 Q 442 197 432 172 Q 427 150 442 142 Q 462 132 467 152 Q 470 167 457 170" fill="none" stroke="#8B5E3C" stroke-width="1.5" opacity="0.4"/>
+        <path d="M 492 112 Q 532 82 547 122 Q 554 150 527 157 Q 507 160 502 142" fill="none" stroke="#8B5E3C" stroke-width="1.2" opacity="0.35"/>
+        <path d="M 422 342 Q 482 302 492 362 Q 498 402 457 410 Q 427 414 422 387 Q 418 364 440 357 Q 462 350 464 372 Q 466 387 452 390" fill="none" stroke="#8B5E3C" stroke-width="1.2" opacity="0.35"/>
+        <path d="M 352 562 Q 422 532 427 592 Q 430 627 397 632 Q 370 634 364 610 Q 360 587 380 580 Q 400 574 402 594 Q 403 607 390 609" fill="none" stroke="#8B5E3C" stroke-width="1.1" opacity="0.3"/>
+        <path d="M 457 202 Q 477 187 480 207 Q 482 222 467 224" fill="none" stroke="#8B5E3C" stroke-width="1" opacity="0.3"/>
+        <path d="M 462 262 Q 480 250 482 267 Q 484 280 470 282" fill="none" stroke="#8B5E3C" stroke-width="1" opacity="0.28"/>
+
+        <!-- ── INSTRUMENT (tilted -28 deg) ── -->
+        <g transform="rotate(-28, 340, 450)">
+
+          <!-- GOURD BODY -->
+          <ellipse cx="297" cy="643" rx="119" ry="136" fill="#2A1608" opacity="0.4"/>
+          <ellipse cx="292" cy="636" rx="116" ry="133" fill="url(#g1)"/>
+          <!-- Face plate -->
+          <ellipse cx="292" cy="630" rx="107" ry="124" fill="url(#gFace)"/>
+          <!-- Wood grain -->
+          <path d="M 182 558 Q 292 546 402 558" fill="none" stroke="#C49A6C" stroke-width="0.5" opacity="0.22"/>
+          <path d="M 176 578 Q 292 565 408 578" fill="none" stroke="#C49A6C" stroke-width="0.5" opacity="0.22"/>
+          <path d="M 172 598 Q 292 584 412 598" fill="none" stroke="#C49A6C" stroke-width="0.5" opacity="0.20"/>
+          <path d="M 170 618 Q 292 604 414 618" fill="none" stroke="#C49A6C" stroke-width="0.5" opacity="0.18"/>
+          <path d="M 172 638 Q 292 624 412 638" fill="none" stroke="#C49A6C" stroke-width="0.5" opacity="0.17"/>
+          <path d="M 176 658 Q 292 645 408 658" fill="none" stroke="#C49A6C" stroke-width="0.5" opacity="0.15"/>
+          <path d="M 182 676 Q 292 664 402 676" fill="none" stroke="#C49A6C" stroke-width="0.5" opacity="0.12"/>
+          <!-- Diagonal grain -->
+          <path d="M 202 544 Q 252 620 242 702" fill="none" stroke="#C49A6C" stroke-width="0.4" opacity="0.15"/>
+          <path d="M 238 540 Q 280 616 272 698" fill="none" stroke="#C49A6C" stroke-width="0.4" opacity="0.15"/>
+          <path d="M 272 538 Q 307 614 300 694" fill="none" stroke="#C49A6C" stroke-width="0.4" opacity="0.13"/>
+          <path d="M 307 540 Q 334 616 327 692" fill="none" stroke="#C49A6C" stroke-width="0.4" opacity="0.12"/>
+          <path d="M 340 543 Q 360 618 354 692" fill="none" stroke="#C49A6C" stroke-width="0.4" opacity="0.10"/>
+          <path d="M 370 552 Q 384 620 379 690" fill="none" stroke="#C49A6C" stroke-width="0.4" opacity="0.08"/>
+          <!-- Gourd border rings -->
+          <ellipse cx="292" cy="630" rx="107" ry="124" fill="none" stroke="#C49A6C" stroke-width="2.2" opacity="0.55"/>
+          <ellipse cx="292" cy="630" rx="99" ry="116" fill="none" stroke="#C49A6C" stroke-width="0.8" opacity="0.3"/>
+          <!-- Carved medallion -->
+          <circle cx="292" cy="626" r="37" fill="none" stroke="#C49A6C" stroke-width="1.4" opacity="0.55"/>
+          <circle cx="292" cy="626" r="29" fill="none" stroke="#C49A6C" stroke-width="0.8" opacity="0.45"/>
+          <circle cx="292" cy="626" r="10" fill="none" stroke="#C49A6C" stroke-width="1" opacity="0.55"/>
+          <path d="M 292 594 L 296 616 L 292 626 L 288 616 Z" fill="#C49A6C" opacity="0.2"/>
+          <path d="M 292 658 L 296 636 L 292 626 L 288 636 Z" fill="#C49A6C" opacity="0.2"/>
+          <path d="M 260 626 L 282 622 L 292 626 L 282 630 Z" fill="#C49A6C" opacity="0.2"/>
+          <path d="M 324 626 L 302 622 L 292 626 L 302 630 Z" fill="#C49A6C" opacity="0.2"/>
+          <path d="M 266 602 L 282 618 L 292 626 L 278 624 Z" fill="#C49A6C" opacity="0.15"/>
+          <path d="M 318 602 L 302 618 L 292 626 L 306 624 Z" fill="#C49A6C" opacity="0.15"/>
+          <path d="M 266 650 L 282 634 L 292 626 L 278 628 Z" fill="#C49A6C" opacity="0.15"/>
+          <path d="M 318 650 L 302 634 L 292 626 L 306 628 Z" fill="#C49A6C" opacity="0.15"/>
+          <!-- Sound hole -->
+          <circle cx="292" cy="626" r="10" fill="#1C1A17"/>
+          <circle cx="292" cy="626" r="10" fill="none" stroke="#C49A6C" stroke-width="1.2"/>
+          <!-- Outer gourd border -->
+          <ellipse cx="292" cy="636" rx="116" ry="133" fill="none" stroke="#3D2210" stroke-width="1.8" opacity="0.35"/>
+          <!-- Bridge -->
+          <rect x="268" y="724" width="50" height="12" rx="3" fill="#EDE9E1"/>
+          <rect x="268" y="724" width="50" height="5" rx="2" fill="#F7F4EF"/>
+          <line x1="276" y1="728" x2="276" y2="735" stroke="#8B5E3C" stroke-width="0.8" opacity="0.5"/>
+          <line x1="285" y1="728" x2="285" y2="735" stroke="#8B5E3C" stroke-width="0.8" opacity="0.5"/>
+          <line x1="294" y1="728" x2="294" y2="735" stroke="#8B5E3C" stroke-width="0.8" opacity="0.5"/>
+          <line x1="303" y1="728" x2="303" y2="735" stroke="#8B5E3C" stroke-width="0.8" opacity="0.5"/>
+
+          <!-- NECK–GOURD JOIN -->
+          <path d="M 270 502 Q 254 482 258 460 Q 264 440 280 432 L 320 432 Q 336 440 342 460 Q 346 482 330 502 Z" fill="url(#g2)"/>
+          <path d="M 260 490 Q 292 482 324 490" fill="none" stroke="#C49A6C" stroke-width="1.8" opacity="0.55"/>
+          <path d="M 258 498 Q 292 490 326 498" fill="none" stroke="#C49A6C" stroke-width="0.9" opacity="0.4"/>
+          <path d="M 264 478 Q 292 472 320 478" fill="none" stroke="#C49A6C" stroke-width="1.4" opacity="0.6"/>
+
+          <!-- NECK -->
+          <rect x="286" y="130" width="22" height="308" rx="5" fill="#1C1A17" opacity="0.4"/>
+          <rect x="274" y="124" width="44" height="312" rx="8" fill="url(#g2)"/>
+          <rect x="282" y="127" width="14" height="306" rx="4" fill="#C49A6C" opacity="0.10"/>
+          <!-- Neck grain -->
+          <path d="M 276 162 Q 296 158 316 162" fill="none" stroke="#C49A6C" stroke-width="0.5" opacity="0.3"/>
+          <path d="M 276 198 Q 296 194 316 198" fill="none" stroke="#C49A6C" stroke-width="0.5" opacity="0.3"/>
+          <path d="M 276 234 Q 296 230 316 234" fill="none" stroke="#C49A6C" stroke-width="0.4" opacity="0.28"/>
+          <path d="M 276 270 Q 296 266 316 270" fill="none" stroke="#C49A6C" stroke-width="0.4" opacity="0.28"/>
+          <path d="M 276 306 Q 296 302 316 306" fill="none" stroke="#C49A6C" stroke-width="0.4" opacity="0.25"/>
+          <path d="M 276 342 Q 296 338 316 342" fill="none" stroke="#C49A6C" stroke-width="0.4" opacity="0.25"/>
+          <path d="M 276 378 Q 296 374 316 378" fill="none" stroke="#C49A6C" stroke-width="0.4" opacity="0.22"/>
+          <path d="M 276 412 Q 296 408 316 412" fill="none" stroke="#C49A6C" stroke-width="0.4" opacity="0.22"/>
+          <path d="M 274 147 L 318 432" fill="none" stroke="#C49A6C" stroke-width="0.4" opacity="0.12"/>
+          <path d="M 318 124 L 274 392" fill="none" stroke="#C49A6C" stroke-width="0.4" opacity="0.10"/>
+          <!-- Frets (ivory --ivory colour) -->
+          <rect x="272" y="272" width="48" height="6" rx="2" fill="#EDE9E1" opacity="0.88"/>
+          <rect x="272" y="272" width="48" height="2.5" rx="1" fill="#F7F4EF"/>
+          <rect x="272" y="337" width="48" height="6" rx="2" fill="#EDE9E1" opacity="0.88"/>
+          <rect x="272" y="337" width="48" height="2.5" rx="1" fill="#F7F4EF"/>
+          <rect x="272" y="397" width="48" height="6" rx="2" fill="#EDE9E1" opacity="0.88"/>
+          <rect x="272" y="397" width="48" height="2.5" rx="1" fill="#F7F4EF"/>
+          <rect x="272" y="432" width="48" height="6" rx="2" fill="#EDE9E1" opacity="0.85"/>
+          <rect x="272" y="432" width="48" height="2.5" rx="1" fill="#F7F4EF"/>
+          <!-- Nut -->
+          <rect x="272" y="124" width="48" height="9" rx="2" fill="#EDE9E1"/>
+          <rect x="272" y="124" width="48" height="4" rx="1.5" fill="#F7F4EF"/>
+
+          <!-- PEG BOX -->
+          <rect x="262" y="64" width="68" height="66" rx="6" fill="#3D2210"/>
+          <path d="M 266 80 Q 296 76 326 80" fill="none" stroke="#C49A6C" stroke-width="1" opacity="0.5"/>
+          <path d="M 264 97 Q 296 93 328 97" fill="none" stroke="#C49A6C" stroke-width="0.8" opacity="0.4"/>
+          <path d="M 265 114 Q 296 110 327 114" fill="none" stroke="#C49A6C" stroke-width="0.8" opacity="0.35"/>
+          <!-- Scroll -->
+          <path d="M 274 64 Q 270 46 280 32 Q 290 20 296 24 Q 302 20 312 32 Q 322 46 318 64 Z" fill="#3D2210"/>
+          <path d="M 280 44 Q 272 32 280 24 Q 290 17 298 26 Q 304 34 298 42 Q 292 48 286 44 Q 282 40 284 34 Q 287 30 292 32" fill="none" stroke="#C49A6C" stroke-width="1.4" opacity="0.6"/>
+          <path d="M 310 40 Q 318 30 312 24 Q 304 18 297 26" fill="none" stroke="#C49A6C" stroke-width="1.1" opacity="0.45"/>
+
+          <!-- RESONATOR GOURD (small, upper right) -->
+          <ellipse cx="392" cy="150" rx="49" ry="53" fill="#1C1A17" opacity="0.35"/>
+          <ellipse cx="388" cy="146" rx="47" ry="51" fill="url(#g3)"/>
+          <!-- Resonator hatch -->
+          <path d="M 344 132 Q 388 124 432 132" fill="none" stroke="#F7F4EF" stroke-width="0.5" opacity="0.22"/>
+          <path d="M 342 146 Q 388 138 434 146" fill="none" stroke="#F7F4EF" stroke-width="0.5" opacity="0.22"/>
+          <path d="M 344 160 Q 388 152 432 160" fill="none" stroke="#F7F4EF" stroke-width="0.5" opacity="0.18"/>
+          <path d="M 350 174 Q 388 167 426 174" fill="none" stroke="#F7F4EF" stroke-width="0.4" opacity="0.15"/>
+          <path d="M 358 120 Q 370 146 362 172" fill="none" stroke="#F7F4EF" stroke-width="0.4" opacity="0.18"/>
+          <path d="M 388 98 Q 392 146 388 194" fill="none" stroke="#F7F4EF" stroke-width="0.4" opacity="0.15"/>
+          <path d="M 418 120 Q 406 146 414 172" fill="none" stroke="#F7F4EF" stroke-width="0.4" opacity="0.15"/>
+          <!-- Resonator border rings -->
+          <ellipse cx="388" cy="146" rx="47" ry="51" fill="none" stroke="#C49A6C" stroke-width="2" opacity="0.65"/>
+          <ellipse cx="388" cy="146" rx="39" ry="43" fill="none" stroke="#C49A6C" stroke-width="0.8" opacity="0.35"/>
+          <!-- Resonator stem -->
+          <rect x="326" y="138" width="28" height="16" rx="4" fill="#5C3A1E"/>
+          <rect x="326" y="138" width="28" height="16" rx="4" fill="none" stroke="#C49A6C" stroke-width="1" opacity="0.45"/>
+
+          <!-- TUNING PEGS (site accent colours) -->
+          <ellipse cx="250" cy="84" rx="15" ry="8" fill="url(#g3)"/>
+          <ellipse cx="250" cy="84" rx="15" ry="8" fill="none" stroke="#8B5E3C" stroke-width="1"/>
+          <ellipse cx="250" cy="84" rx="5" ry="4" fill="#3D2210" opacity="0.5"/>
+          <rect x="264" y="80" width="9" height="8" rx="1.5" fill="#8B5E3C"/>
+          <ellipse cx="250" cy="110" rx="15" ry="8" fill="url(#g3)"/>
+          <ellipse cx="250" cy="110" rx="15" ry="8" fill="none" stroke="#8B5E3C" stroke-width="1"/>
+          <ellipse cx="250" cy="110" rx="5" ry="4" fill="#3D2210" opacity="0.5"/>
+          <rect x="264" y="106" width="9" height="8" rx="1.5" fill="#8B5E3C"/>
+          <ellipse cx="342" cy="84" rx="15" ry="8" fill="url(#g3)"/>
+          <ellipse cx="342" cy="84" rx="15" ry="8" fill="none" stroke="#8B5E3C" stroke-width="1"/>
+          <ellipse cx="342" cy="84" rx="5" ry="4" fill="#3D2210" opacity="0.5"/>
+          <rect x="319" y="80" width="9" height="8" rx="1.5" fill="#8B5E3C"/>
+          <ellipse cx="342" cy="110" rx="15" ry="8" fill="url(#g3)"/>
+          <ellipse cx="342" cy="110" rx="15" ry="8" fill="none" stroke="#8B5E3C" stroke-width="1"/>
+          <ellipse cx="342" cy="110" rx="5" ry="4" fill="#3D2210" opacity="0.5"/>
+          <rect x="319" y="106" width="9" height="8" rx="1.5" fill="#8B5E3C"/>
+
+          <!-- STRINGS -->
+          <line x1="280" y1="133" x2="274" y2="724" stroke="#B8B0A2" stroke-width="0.9" opacity="0.8"/>
+          <line x1="288" y1="133" x2="283" y2="724" stroke="#EDE9E1" stroke-width="0.65" opacity="0.75"/>
+          <line x1="298" y1="133" x2="295" y2="724" stroke="#EDE9E1" stroke-width="0.65" opacity="0.75"/>
+          <line x1="307" y1="133" x2="305" y2="724" stroke="#B8B0A2" stroke-width="0.9" opacity="0.8"/>
+          <!-- String shimmer -->
+          <line x1="288" y1="133" x2="283" y2="420" stroke="#F7F4EF" stroke-width="0.3" opacity="0.5"/>
+          <line x1="298" y1="133" x2="295" y2="420" stroke="#F7F4EF" stroke-width="0.3" opacity="0.5"/>
+
+        </g>
+
+        <!-- Floor shadow -->
+        <ellipse cx="318" cy="795" rx="115" ry="14" fill="#1C1A17" opacity="0.07"/>
       </svg>
     </div>
     <div class="hero-badge">
