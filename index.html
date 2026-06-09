@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hindustani Vocal Lessons · Anisshka Annand Khadtale</title>
+  <meta name="description" content="Hindustani vocal lessons with Anisshka Khadtale. Online and in-person, all ages, Fremont CA. Summer 2026." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -34,6 +35,9 @@
       line-height: 1.7;
       font-weight: 300;
     }
+
+    /* scroll offset for fixed nav */
+    [id] { scroll-margin-top: 72px; }
 
     /* ── NAV ── */
     nav {
@@ -250,6 +254,13 @@
       color: var(--ink-mid);
       font-style: italic;
     }
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 6vw;
+      align-items: start;
+      margin-top: 2.5rem;
+    }
     .about-body { color: var(--ink-muted); line-height: 1.9; }
     .about-body p + p { margin-top: 1rem; }
     .about-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
@@ -422,40 +433,28 @@
 
     /* ── MOBILE ── */
     @media (max-width: 768px) {
-      /* Nav */
       .nav-links { display: none; }
       .nav-toggle { display: flex; }
 
-      /* Hero */
       .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 60px; }
       .hero-text { padding: 3rem 6vw 3.5rem; }
       .hero-visual { display: none; }
 
-      /* Section padding */
       section { padding: 3.5rem 6vw; }
 
-      /* About */
       #about { grid-template-columns: 1fr; gap: 2rem; }
+      .about-inner { grid-template-columns: 1fr; gap: 2rem; }
       .about-aside { border-left: none; border-top: 2px solid var(--accent-light); padding-left: 0; padding-top: 1.25rem; }
       .about-aside p { font-size: 1.2rem; }
 
-      /* Lessons — single column on small screens */
       .lessons-grid { grid-template-columns: 1fr; }
-
-      /* Rates — single column */
       .rates-grid { grid-template-columns: 1fr; }
-
-      /* Schedule */
       .schedule-cols { grid-template-columns: 1fr; gap: 2rem; }
 
-      /* Contact */
       .contact-email { font-size: 1.1rem; }
-
-      /* Footer */
       footer { flex-direction: column; text-align: center; }
     }
 
-    /* Very small screens */
     @media (max-width: 380px) {
       .hero-title { font-size: 2.4rem; }
       .section-title { font-size: 1.8rem; }
@@ -533,7 +532,7 @@
     <p class="section-label">Background</p>
     <h2 class="section-title">A practice rooted in<br/>tradition and performance.</h2>
   </div>
-  <div class="reveal" style="margin-top: 2.5rem; display: grid; grid-template-columns: 1fr 1.4fr; gap: 6vw; align-items: start;">
+  <div class="about-inner reveal">
     <div class="about-aside">
       <p>"Sur is not just about notes, it is about surrender." – Pandit Jasraj</p>
     </div>
@@ -674,13 +673,11 @@
 </footer>
 
 <script>
-  // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  // Mobile nav toggle
   const toggle = document.querySelector('.nav-toggle');
   const drawer = document.getElementById('navDrawer');
   toggle.addEventListener('click', () => {
@@ -688,7 +685,6 @@
     toggle.classList.toggle('open', open);
     toggle.setAttribute('aria-expanded', open);
   });
-  // Close drawer when a link is tapped
   drawer.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => {
       drawer.classList.remove('open');
@@ -696,19 +692,6 @@
       toggle.setAttribute('aria-expanded', false);
     });
   });
-
-  // Mobile about grid fix
-  function fixAboutGrid() {
-    const aboutInner = document.querySelector('#about .reveal:last-child');
-    if (!aboutInner) return;
-    if (window.innerWidth <= 768) {
-      aboutInner.style.gridTemplateColumns = '1fr';
-    } else {
-      aboutInner.style.gridTemplateColumns = '1fr 1.4fr';
-    }
-  }
-  fixAboutGrid();
-  window.addEventListener('resize', fixAboutGrid);
 </script>
 
 </body>
