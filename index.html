@@ -38,7 +38,7 @@
     /* ── NAV ── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: rgba(247,244,239,0.92);
+      background: rgba(247,244,239,0.96);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--rule);
       display: flex; align-items: center; justify-content: space-between;
@@ -47,11 +47,15 @@
     }
     .nav-brand {
       font-family: var(--serif);
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       font-weight: 400;
       letter-spacing: 0.01em;
       color: var(--ink);
       text-decoration: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 60vw;
     }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a {
@@ -63,6 +67,50 @@
       transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--accent); }
+
+    /* Mobile nav toggle */
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--ink);
+      transition: all 0.3s;
+    }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    .nav-drawer {
+      display: none;
+      position: fixed;
+      top: 60px; left: 0; right: 0;
+      background: rgba(247,244,239,0.98);
+      border-bottom: 1px solid var(--rule);
+      padding: 1.5rem 6vw;
+      z-index: 99;
+      flex-direction: column;
+      gap: 0;
+    }
+    .nav-drawer.open { display: flex; }
+    .nav-drawer a {
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      text-decoration: none;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .nav-drawer a:last-child { border-bottom: none; }
 
     /* ── HERO ── */
     .hero {
@@ -92,10 +140,7 @@
       color: var(--ink);
       margin-bottom: 1.5rem;
     }
-    .hero-title em {
-      font-style: italic;
-      color: var(--accent);
-    }
+    .hero-title em { font-style: italic; color: var(--accent); }
     .hero-sub {
       font-size: 1rem;
       color: var(--ink-muted);
@@ -103,6 +148,7 @@
       margin-bottom: 2.5rem;
       line-height: 1.8;
     }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: 0.75rem; }
     .btn-primary {
       display: inline-block;
       padding: 0.75rem 2rem;
@@ -131,7 +177,6 @@
       border: 1px solid var(--ink);
       cursor: pointer;
       transition: all 0.2s;
-      margin-left: 1rem;
     }
     .btn-secondary:hover { background: var(--ink); color: var(--ivory); }
     .hero-visual {
@@ -146,10 +191,7 @@
       align-items: center;
       justify-content: center;
     }
-    .raga-pattern {
-      opacity: 0.18;
-      width: 80%;
-    }
+    .raga-pattern { opacity: 0.18; width: 80%; }
     .hero-badge {
       position: absolute;
       bottom: 2.5rem;
@@ -187,11 +229,6 @@
       line-height: 1.15;
       margin-bottom: 1.5rem;
     }
-    hr.rule {
-      border: none;
-      border-top: 1px solid var(--rule);
-      margin: 3rem 0;
-    }
 
     /* ── ABOUT ── */
     #about {
@@ -199,7 +236,7 @@
       display: grid;
       grid-template-columns: 1fr 1.4fr;
       gap: 6vw;
-      align-items: center;
+      align-items: start;
     }
     .about-aside {
       border-left: 2px solid var(--accent-light);
@@ -207,7 +244,7 @@
     }
     .about-aside p {
       font-family: var(--serif);
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-weight: 300;
       line-height: 1.55;
       color: var(--ink-mid);
@@ -215,10 +252,7 @@
     }
     .about-body { color: var(--ink-muted); line-height: 1.9; }
     .about-body p + p { margin-top: 1rem; }
-    .about-tags {
-      display: flex; flex-wrap: wrap; gap: 0.5rem;
-      margin-top: 1.5rem;
-    }
+    .about-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
     .tag {
       font-size: 0.72rem;
       letter-spacing: 0.06em;
@@ -238,26 +272,15 @@
       border: 1px solid var(--rule);
       margin-top: 2.5rem;
     }
-    .lesson-card {
-      background: var(--ivory);
-      padding: 2rem 1.75rem;
-    }
-    .lesson-icon {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: var(--accent);
-    }
+    .lesson-card { background: var(--ivory); padding: 2rem 1.75rem; }
+    .lesson-icon { font-size: 1.5rem; margin-bottom: 1rem; color: var(--accent); }
     .lesson-card h3 {
       font-family: var(--serif);
       font-size: 1.35rem;
       font-weight: 400;
       margin-bottom: 0.5rem;
     }
-    .lesson-card p {
-      font-size: 0.9rem;
-      color: var(--ink-muted);
-      line-height: 1.75;
-    }
+    .lesson-card p { font-size: 0.9rem; color: var(--ink-muted); line-height: 1.75; }
 
     /* ── RATES ── */
     #rates { background: var(--warm); }
@@ -273,10 +296,7 @@
       padding: 2rem 1.75rem;
       position: relative;
     }
-    .rate-card.featured {
-      border-color: var(--accent-light);
-      border-width: 2px;
-    }
+    .rate-card.featured { border-color: var(--accent-light); border-width: 2px; }
     .rate-badge {
       position: absolute;
       top: -1px; right: 1.5rem;
@@ -302,21 +322,9 @@
       line-height: 1;
       margin-bottom: 0.25rem;
     }
-    .rate-per {
-      font-size: 0.8rem;
-      color: var(--ink-muted);
-      margin-bottom: 1.25rem;
-    }
-    .rate-details {
-      font-size: 0.85rem;
-      color: var(--ink-muted);
-      line-height: 1.75;
-      list-style: none;
-    }
-    .rate-details li::before {
-      content: "–  ";
-      color: var(--accent-light);
-    }
+    .rate-per { font-size: 0.8rem; color: var(--ink-muted); margin-bottom: 1.25rem; }
+    .rate-details { font-size: 0.85rem; color: var(--ink-muted); line-height: 1.75; list-style: none; }
+    .rate-details li::before { content: "–  "; color: var(--accent-light); }
     .rate-note {
       margin-top: 2rem;
       font-size: 0.82rem;
@@ -344,18 +352,16 @@
     .schedule-row {
       display: flex;
       justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.25rem;
       padding: 0.6rem 0;
       border-bottom: 1px solid var(--rule);
       font-size: 0.9rem;
     }
     .schedule-day { color: var(--ink-mid); font-weight: 400; }
     .schedule-time { color: var(--ink-muted); }
-    .schedule-note {
-      margin-top: 1rem;
-      font-size: 0.8rem;
-      color: var(--ink-muted);
-      font-style: italic;
-    }
+    .schedule-note { margin-top: 1rem; font-size: 0.8rem; color: var(--ink-muted); font-style: italic; }
 
     /* ── CONTACT ── */
     #contact {
@@ -365,21 +371,28 @@
     }
     #contact .section-label { color: var(--accent-light); }
     #contact .section-title { color: var(--ivory); }
-    #contact p {
+    #contact > p {
       color: rgba(247,244,239,0.6);
       max-width: 480px;
       margin: 0 auto 2.5rem;
       font-size: 0.95rem;
     }
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
     .contact-email {
       display: inline-block;
       font-family: var(--serif);
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       color: var(--ivory);
       text-decoration: none;
       border-bottom: 1px solid var(--accent-light);
       padding-bottom: 2px;
-      margin-bottom: 2.5rem;
+      word-break: break-all;
     }
     .contact-email:hover { color: var(--accent-light); }
     .contact-note {
@@ -397,6 +410,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
       font-size: 0.78rem;
       color: rgba(247,244,239,0.35);
     }
@@ -405,15 +420,46 @@
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .reveal.visible { opacity: 1; transform: none; }
 
-    /* ── RESPONSIVE ── */
+    /* ── MOBILE ── */
     @media (max-width: 768px) {
-      .hero { grid-template-columns: 1fr; }
+      /* Nav */
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+
+      /* Hero */
+      .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 60px; }
+      .hero-text { padding: 3rem 6vw 3.5rem; }
       .hero-visual { display: none; }
-      #about { grid-template-columns: 1fr; }
+
+      /* Section padding */
+      section { padding: 3.5rem 6vw; }
+
+      /* About */
+      #about { grid-template-columns: 1fr; gap: 2rem; }
+      .about-aside { border-left: none; border-top: 2px solid var(--accent-light); padding-left: 0; padding-top: 1.25rem; }
+      .about-aside p { font-size: 1.2rem; }
+
+      /* Lessons — single column on small screens */
+      .lessons-grid { grid-template-columns: 1fr; }
+
+      /* Rates — single column */
+      .rates-grid { grid-template-columns: 1fr; }
+
+      /* Schedule */
       .schedule-cols { grid-template-columns: 1fr; gap: 2rem; }
-      nav { padding: 0 4vw; }
-      .nav-links { gap: 1rem; }
-      section { padding: 4rem 6vw; }
+
+      /* Contact */
+      .contact-email { font-size: 1.1rem; }
+
+      /* Footer */
+      footer { flex-direction: column; text-align: center; }
+    }
+
+    /* Very small screens */
+    @media (max-width: 380px) {
+      .hero-title { font-size: 2.4rem; }
+      .section-title { font-size: 1.8rem; }
+      .btn-primary, .btn-secondary { padding: 0.7rem 1.4rem; font-size: 0.75rem; }
     }
   </style>
 </head>
@@ -429,22 +475,33 @@
     <li><a href="#schedule">Schedule</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- Mobile nav drawer -->
+<div class="nav-drawer" id="navDrawer">
+  <a href="#about" class="drawer-link">About</a>
+  <a href="#lessons" class="drawer-link">Lessons</a>
+  <a href="#rates" class="drawer-link">Rates</a>
+  <a href="#schedule" class="drawer-link">Schedule</a>
+  <a href="#contact" class="drawer-link">Contact</a>
+</div>
 
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-text">
     <p class="hero-eyebrow">Hindustani Vocal Lessons · Summer 2026</p>
-    <h1 class="hero-title">Learn the art of<br/><em>classical music</em> from the<br/>ground up.</h1>
-    <p class="hero-sub">Online and in-person lessons available for all ages, especially complete beginners seeking to deepen a foundational practice.</p>
-    <div>
+    <h1 class="hero-title">Learn the art of<br/><em>classical music</em><br/>from the ground up.</h1>
+    <p class="hero-sub">Online and in-person lessons available for all ages, especially complete beginners seeking to build a foundational practice.</p>
+    <div class="hero-btns">
       <a href="#contact" class="btn-primary">Enquire Now</a>
       <a href="#lessons" class="btn-secondary">Learn More</a>
     </div>
   </div>
   <div class="hero-visual" aria-hidden="true">
     <div class="hero-visual-inner">
-      <!-- Decorative tanpura / wave motif -->
       <svg class="raga-pattern" viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg">
         <ellipse cx="200" cy="420" rx="80" ry="140" stroke="#8B5E3C" stroke-width="1.5"/>
         <ellipse cx="200" cy="420" rx="55" ry="100" stroke="#8B5E3C" stroke-width="1"/>
@@ -453,11 +510,9 @@
         <rect x="183" y="55" width="34" height="14" rx="2" stroke="#8B5E3C" stroke-width="1.2"/>
         <line x1="160" y1="260" x2="240" y2="260" stroke="#8B5E3C" stroke-width="1"/>
         <line x1="155" y1="275" x2="245" y2="275" stroke="#8B5E3C" stroke-width="0.8"/>
-        <!-- wave lines suggesting notes -->
         <path d="M 60 150 Q 100 130 140 150 Q 180 170 220 150 Q 260 130 300 150 Q 330 165 350 150" stroke="#8B5E3C" stroke-width="0.8" fill="none" opacity="0.6"/>
         <path d="M 60 170 Q 100 150 140 170 Q 180 190 220 170 Q 260 150 300 170 Q 330 185 350 170" stroke="#8B5E3C" stroke-width="0.6" fill="none" opacity="0.4"/>
         <path d="M 60 190 Q 100 170 140 190 Q 180 210 220 190 Q 260 170 300 190 Q 330 205 350 190" stroke="#8B5E3C" stroke-width="0.5" fill="none" opacity="0.3"/>
-        <!-- sa re ga ma dots -->
         <circle cx="108" cy="370" r="3" fill="#C49A6C" opacity="0.5"/>
         <circle cx="160" cy="335" r="3" fill="#C49A6C" opacity="0.5"/>
         <circle cx="200" cy="320" r="3" fill="#C49A6C" opacity="0.5"/>
@@ -480,17 +535,16 @@
   </div>
   <div class="reveal" style="margin-top: 2.5rem; display: grid; grid-template-columns: 1fr 1.4fr; gap: 6vw; align-items: start;">
     <div class="about-aside">
-      <p>“Sur is not just about notes, it is about surrender.” – Pandit Jasraj</p>
+      <p>"Sur is not just about notes, it is about surrender." – Pandit Jasraj</p>
     </div>
     <div class="about-body">
       <p>I am Anisshka, a vocalist trained in Hindustani classical music with years of active experience, including concerts and cultural events. My musical practice spans formal study of raga structures, tala cycles, and bandish composition alongside ensemble performance in Indian classical music settings.</p>
       <p>I have been a member and informal leader of the Indian Classical Arts Society at UMass Amherst, where I organised and performed at cultural events. My background also includes mentoring fellow musicians and introducing the art form to students with no prior exposure.</p>
-      <p>This summer, I am opening lessons to students of all ages, mainly curious beginners who wish to develop a foundational practice, with discipline and structure.</p>
+      <p>This summer, I am opening lessons to students of all ages, mainly curious beginners who wish to develop a foundational practice with discipline and structure.</p>
       <div class="about-tags">
         <span class="tag">Swara Practice</span>
         <span class="tag">Basic Tala & Rhythm</span>
         <span class="tag">Foundational Raags</span>
-        <span class="tag">Swara Practice</span>
         <span class="tag">Importance of Riaz</span>
       </div>
     </div>
@@ -606,7 +660,7 @@
   <p class="section-label reveal">Get in Touch</p>
   <h2 class="section-title reveal">Ready to begin?</h2>
   <p class="reveal">Send a note with your experience level, whether you prefer online or in-person, and any questions. I will get back to you within a day or two.</p>
-  <div class="reveal" style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem; margin-bottom: 2.5rem;">
+  <div class="contact-links reveal">
     <a href="mailto:anisshkakhadtale@gmail.com" class="contact-email">anisshkakhadtale@gmail.com</a>
     <a href="tel:+17742868630" class="contact-email">+1 (774) 286-8630</a>
   </div>
@@ -620,10 +674,41 @@
 </footer>
 
 <script>
+  // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Mobile nav toggle
+  const toggle = document.querySelector('.nav-toggle');
+  const drawer = document.getElementById('navDrawer');
+  toggle.addEventListener('click', () => {
+    const open = drawer.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open);
+  });
+  // Close drawer when a link is tapped
+  drawer.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      drawer.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', false);
+    });
+  });
+
+  // Mobile about grid fix
+  function fixAboutGrid() {
+    const aboutInner = document.querySelector('#about .reveal:last-child');
+    if (!aboutInner) return;
+    if (window.innerWidth <= 768) {
+      aboutInner.style.gridTemplateColumns = '1fr';
+    } else {
+      aboutInner.style.gridTemplateColumns = '1fr 1.4fr';
+    }
+  }
+  fixAboutGrid();
+  window.addEventListener('resize', fixAboutGrid);
 </script>
 
 </body>
