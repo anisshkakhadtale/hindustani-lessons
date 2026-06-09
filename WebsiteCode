@@ -480,19 +480,18 @@
   </div>
   <div class="reveal" style="margin-top: 2.5rem; display: grid; grid-template-columns: 1fr 1.4fr; gap: 6vw; align-items: start;">
     <div class="about-aside">
-      <p>"Music is not just something to be heard — it is something to be inhabited."</p>
+      <p>“Sur is not just about notes, it is about surrender.” – Pandit Jasraj</p>
     </div>
     <div class="about-body">
-      <p>I am Ani, a vocalist trained in Hindustani classical music with years of active performance experience, including concerts, cultural events, and wedding ceremonies. My musical practice spans formal study of raga structures, tala cycles, and bandish composition alongside ensemble performance in Indian classical music settings.</p>
-      <p>I have been a member and informal leader of a campus Indian Classical Music Club, where I organised and performed at cultural events. My background also includes mentoring fellow musicians and introducing the art form to students with no prior exposure.</p>
-      <p>This summer, I am opening lessons to students of all ages — from curious beginners to those who wish to develop an existing practice with more discipline and structure.</p>
+      <p>I am Anisshka, a vocalist trained in Hindustani classical music with years of active experience, including concerts and cultural events. My musical practice spans formal study of raga structures, tala cycles, and bandish composition alongside ensemble performance in Indian classical music settings.</p>
+      <p>I have been a member and informal leader of the Indian Classical Arts Society at UMass Amherst, where I organised and performed at cultural events. My background also includes mentoring fellow musicians and introducing the art form to students with no prior exposure.</p>
+      <p>This summer, I am opening lessons to students of all ages, msinly curious beginners who wish to develop a foundational practice with discipline and structure.</p>
       <div class="about-tags">
-        <span class="tag">Raga Theory</span>
-        <span class="tag">Tala & Rhythm</span>
-        <span class="tag">Bandish</span>
         <span class="tag">Swara Practice</span>
-        <span class="tag">Ear Training</span>
-        <span class="tag">Performance Prep</span>
+        <span class="tag">Basic Tala & Rhythm</span>
+        <span class="tag">Foundational Raags</span>
+        <span class="tag">Swara Practice</span>
+        <span class="tag">Importance of Riaz</span>
       </div>
     </div>
   </div>
@@ -597,10 +596,6 @@
         <span class="schedule-day">Saturday</span>
         <span class="schedule-time">10:00 am – 2:00 pm</span>
       </div>
-      <div class="schedule-row">
-        <span class="schedule-day">Sunday</span>
-        <span class="schedule-time">By arrangement</span>
-      </div>
       <p class="schedule-note">Weekend slots are limited. Reach out early to reserve. Online students in other time zones: we can find a mutually convenient time.</p>
     </div>
   </div>
@@ -612,14 +607,14 @@
   <h2 class="section-title reveal">Ready to begin?</h2>
   <p class="reveal">Send a note with your experience level, whether you prefer online or in-person, and any questions. I will get back to you within a day or two.</p>
   <div class="reveal">
-    <a href="mailto:your@email.com" class="contact-email">your@email.com</a>
+    <a href="mailto:anisshkakhadtale@gmail.com" class="contact-email">anisshkakhadtale@gmail.com</a>
   </div>
   <p class="contact-note reveal">Based in Fremont, CA · Remote lessons available worldwide</p>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <span>© 2025 Ani · Hindustani Vocal Lessons</span>
+  <span>© 2025 Anisshka · Hindustani Vocal Lessons</span>
   <span>Fremont, CA &amp; Online</span>
 </footer>
 
